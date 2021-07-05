@@ -1,19 +1,19 @@
 <h1>Taxa de letalidade da <b>COVID-19</b> por casos confirmados </h1>
 <img src="../reports/figures/corona.jpg" alt="Corona Virus">
 <div style="text-align: right">
-    <p style="text-align: right; font-size:16px; font-style: italic">Filipi Rigui</p>
+    <p style="text-align: right; font-size:16px; font-style: italic">Filipi Rigui - Engenheiro de Controle e Automação</p>
     <a href="https://www.linkedin.com/in/filipirigui/"><img border="0" alt="LinkedIn" src="../references/img/in.png" width="32" height="32"></a>   
     <a href="https://github.com/fdrigui"><img border="0" alt="LinkedIn" src="../references/img/gh.png" width="32" height="32"></a>
 </div><br>
 
-Notebook com a análise exploratória: [**Análise da Poliomielite no Brasil**](./notebooks/analise_polio_brasil.ipynb)
+Notebook com a análise exploratória: [**Análise da CFR em São Paulo**](../notebooks/reports/nb_suporte-2.ipynb)
 <p align="justify">Você já se perguntou qual é a chance de uma pessoa vir a óbito devido a complicações da <b>COVID-19</b>? De líderes políticos até curiosos no cafezinho, saber a resposta a essa pergunta pode ajudar na conscientização e enfrentamento dessa pandemia.<br>
 Esse artigo vai abordar cuidados que se precisam ter ao avaliar os indicadores mais comuns para se descrever <i>letalidade</i> do <b>COVID-19</b>, além de provocar o leitor a refletir e filtrar as informações que lhes são apresentadas no seu dia a dia.<br>
-Para tal, pretendo utilizar os dados da saudosa cidade de <i>Americana-SP</i> (ao menos para mim), e comparar com as demais cidades da <i>RMC</i> (Região Metropolitana de Campinas) quando se fizer necessário.<br></p>
+Para tal, pretendo utilizar os dados da cidade de sâo Paulo, Se necessário, pretendo utilizar outras cidades para futuras comparações.<br></p>
 
 <h2>Número <i>Casos</i> e <i> Mortes</i> confirmados</h2>
 <p align="justify">Os dois indicadores que são comumente utilizados para se estimar a taxa de mortalidade pelo COVID-19 são: <b>Número de casos confirmados</b> e <b>número de óbitos por covid-19</b>. Vamos ver graficamente como essas duas variáveis se comportam ao longo do tempo.
-<img src="./reports/figures/cumulative-deaths-and-cases-covid-19.png" alt="Corona Virus">
+<img src="../reports/figures/casos-e-obitos-sp.png" alt="Corona Virus">
 É possível observar que os dados têm formas similares e aumentam na medida que o tempo passa. Isso pode nos levar a crer que dividir o <i>número de casos confirmados</i> pelo <i>número de óbitos por <b>covid-19</b></i> resulta no <i>risco de se morrer ao contrair <b>COVID-19</b></i>. Será que esse método, também conhecido com <i>CFR</i>, consegue isolar a taxa de letalidade do <b>COVID-19</b> de fatores externos? Vamos responder essa pergunta a seguir. </p>
 
 <h2>CFR (Taxa de Letalidade - Case Fatality Risk)</h2>
@@ -23,7 +23,7 @@ $$Case Fatality Rate (CFR) = \frac{\text{Obitos confirmados de COVID-19}}{\text{
 
 <h2>Casos confirmados de <b>COVID-19</b></h2>
 <p align="justify">
-<img src="./reports/figures/piramide-casos.png" alt="Corona Virus">
+<img src="../reports/figures/piramide-casos.png" alt="Corona Virus">
     Usar o indicador de <i>casos confirmados</i> por si só é um problema, uma vez que sabemos que a grande maioria dos infectados são assintomáticos e nem chegam a serem testados. Esse problema faz com que o resultado seja impactado negativamente, trazendo um fator de letalidade maior que o real. <br>
 Quando medimos os casos confirmados, nas entrelinhas, também estamos medindo uma série de outros fatores que estão embutidos no número de casos confirmados e podem trazer erro para o resultado. </p>
 
@@ -48,6 +48,7 @@ Quando medimos os casos confirmados, nas entrelinhas, também estamos medindo um
 Como assim? Uma região que tenha uma idade média elevada, e em decorrência da idade um número maior de pessoas com comorbidades, vai trazer para o resultado um valor de letalidade maior do que a letalidade real. O contrário acontece em uma região onde a idade média das pessoas é muito mais baixa que a média. </p>
 
 <h2><i>CFR</i> do <b>COVID-19</b></h2>
+<img src="../reports/figures/CFR-SP.png" alt="Corona Virus">
 <p align="justify">Depois de considerar as variáveis (caos e óbitos confirmados) individualmente, nós precisamos fazer a equação da <i>CFR</i> e entender o que é que esse indicador nos mostra e como nós podemos utilizá-lo ao nosso favor para o enfrentamento correto da pandemia. </p>
 
 <h3>Pessoas que vão falecer, mais ainda são somente casos confirmados</h3>
@@ -56,7 +57,6 @@ Imagine que uma determinada região tenha hoje 1000 casos e 50 mortos. Quantas p
 
 <h3>Baixa testagem no inicio</h3>
 <p align="justify">No início de uma epidemia, normalmente leva-se um tempo até que a região esteja preparada para testar a presença da doença. Isso faz gerar um déficit de casos para o número de mortos. <br>
-<img src="./reports/figures/coronavirus-data-explorer.png" alt="Corona Virus">
 Se indevidamente nós utilizarmos os valores gerais, da quantidade total de casos por total de óbitos confirmados, nós vamos "carregar" esse erro inicial para o resultado final, mas nós vemos uma certa estabilidade após outubro 2020, então parece razoável utilizar os resultados a partir daí. </p>
 
 <h3>Comparação entre regiões</h3>
