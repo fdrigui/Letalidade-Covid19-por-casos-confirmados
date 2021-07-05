@@ -13,7 +13,7 @@ Para tal, pretendo utilizar os dados da cidade de sâo Paulo, Se necessário, pr
 
 <h2>Número <i>Casos</i> e <i> Mortes</i> confirmados</h2>
 <p align="justify">Os dois indicadores que são comumente utilizados para se estimar a taxa de mortalidade pelo COVID-19 são: <b>Número de casos confirmados</b> e <b>número de óbitos por covid-19</b>. Vamos ver graficamente como essas duas variáveis se comportam ao longo do tempo.</p>
-<img src="../reports/figures/casos-e-obitos-sp.png" alt="Corona Virus">
+<img src="../reports/figures/casos-e-obitos-SP.png" alt="Corona Virus_1">
 <p align="justify">É possível observar que os dados têm formas similares e aumentam na medida que o tempo passa. Isso pode nos levar a crer que dividir o <i>número de casos confirmados</i> pelo <i>número de óbitos por <b>covid-19</b></i> resulta no <i>risco de se morrer ao contrair <b>COVID-19</b></i>. Será que esse método, também conhecido com <i>CFR</i>, consegue isolar a taxa de letalidade do <b>COVID-19</b> de fatores externos? Vamos responder essa pergunta a seguir. </p>
 
 <h2>CFR (Taxa de Letalidade - Case Fatality Risk)</h2>
