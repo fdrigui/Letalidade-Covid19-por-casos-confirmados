@@ -82,3 +82,4 @@ Pense sempre no erro de medição como algo que vai existir, mais que precisa se
 [Coronavirus (COVID-19) Mortality Rate](https://www.worldometers.info/coronavirus/coronavirus-death-rate/)<br>
 [Estimating mortality from COVID-19](https://www.who.int/news-room/commentaries/detail/estimating-mortality-from-covid-19)<br>
 
+
